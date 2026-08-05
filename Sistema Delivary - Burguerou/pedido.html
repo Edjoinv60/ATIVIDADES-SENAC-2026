@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Finalizar Pedido</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <script src="JS/produtos.js" defer></script>
+    <script src="JS/pedido.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <button id="botao-voltar">← Voltar</button>
+
+      <h1>Finalizar Pedido</h1>
+
+      <section id="resumo-pedido"></section>
+
+      <form id="formulario">
+        <label>Nome</label>
+        <input type="text" id="nome" />
+
+        <label>Telefone</label>
+        <input type="tel" id="telefone" />
+
+        <label>Endereço</label>
+        <input type="text" id="endereco" />
+
+        <label>Número</label>
+        <input type="text" id="numero" />
+
+        <label>Bairro</label>
+        <input type="text" id="bairro" />
+
+        <label>Forma de Pagamento</label>
+
+        <select id="pagamento">
+          <option>Dinheiro</option>
+
+          <option>Pix</option>
+
+          <option>Cartão</option>
+        </select>
+
+        <button type="submit">Confirmar Pedido</button>
+      </form>
+    </main>
+  </body>
+</html>

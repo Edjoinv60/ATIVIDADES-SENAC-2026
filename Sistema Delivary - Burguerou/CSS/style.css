@@ -1,0 +1,734 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#fff7f0,#ffe8d6);
+    color:#222;
+}
+
+/* ========================= */
+/* CONTEÚDO PRINCIPAL */
+/* ========================= */
+
+main{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding: 10px;
+}
+
+main h1{
+    font-size:56px;
+    color:#d62828;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+main p{
+    font-size:20px;
+    color:#555;
+    margin-bottom:40px;
+}
+
+/* ========================= */
+/* CARROSSEL */
+/* ========================= */
+
+#carrossel{
+
+    width:100%;
+    max-width:1500px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:40px;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+#card-produto{
+
+    width:700px;
+    min-height:760px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+#card-produto:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ========================= */
+/* IMAGEM */
+/* ========================= */
+
+#card-produto img{
+
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+.titulo-produto{
+
+    font-size:42px;
+
+    margin-top:25px;
+
+    color:#222;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* PREÇO */
+/* ========================= */
+
+.preco-produto{
+
+    font-size:36px;
+
+    color:#d62828;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+}
+
+/* ========================= */
+/* DESCRIÇÃO */
+/* ========================= */
+
+.descricao-produto{
+
+    margin-top:1px;
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:0.1;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* BOTÃO */
+/* ========================= */
+
+.botao-ver-mais{
+
+    margin-top:auto;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#fcbf49;
+
+    color:#222;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.botao-ver-mais:hover{
+
+    background:#f77f00;
+
+    color:white;
+
+    transform:scale(1.02);
+
+}
+
+/* ========================= */
+/* SETAS */
+/* ========================= */
+
+#anterior,
+#proximo{
+
+    width:90px;
+    height:90px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+#anterior:hover,
+#proximo:hover{
+
+    transform:scale(1.1);
+
+    background:#9d0208;
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:768px){
+
+main{
+
+    padding:20px;
+
+}
+
+main h1{
+
+    font-size:38px;
+
+}
+
+main p{
+
+    font-size:16px;
+
+}
+
+#carrossel{
+
+    gap:15px;
+
+}
+
+#card-produto{
+
+    width:100%;
+    min-height:auto;
+
+    padding:20px;
+
+}
+
+#card-produto img{
+
+    height:250px;
+
+}
+
+.titulo-produto{
+
+    font-size:28px;
+
+}
+
+.preco-produto{
+
+    font-size:26px;
+
+}
+
+.descricao-produto{
+
+    font-size:16px;
+
+}
+
+#anterior,
+#proximo{
+
+    width:55px;
+    height:55px;
+
+    font-size:24px;
+
+}
+
+.botao-ver-mais{
+
+    font-size:18px;
+
+    padding:15px;
+
+}
+
+}
+
+#produto-detalhes{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.card-detalhes{
+
+    width:900px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.card-detalhes img{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+.card-detalhes h1{
+
+    margin-top:25px;
+
+    font-size:42px;
+
+}
+
+.card-detalhes h2{
+
+    margin-top:15px;
+
+    color:#d62828;
+
+    font-size:34px;
+
+}
+
+.card-detalhes p{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.botao-pedido{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.botao-pedido:hover{
+
+    background:#9d0208;
+
+}
+
+#botao-voltar{
+
+    position:absolute;
+
+    top:30px;
+
+    left:30px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+#botao-voltar:hover{
+
+    background:#9d0208;
+
+    transform:translateX(-5px);
+
+}
+
+/* ========================= */
+/* QUANTIDADE */
+/* ========================= */
+
+.controle-quantidade{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+
+    gap:25px;
+
+    margin:25px 0;
+
+}
+
+.controle-quantidade button{
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.controle-quantidade button:hover{
+
+    background:#9d0208;
+
+    transform:scale(1.08);
+
+}
+
+.controle-quantidade span{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    min-width:40px;
+
+    text-align:center;
+
+}
+
+.quantidade-titulo{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    min-width:40px;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+/* TELA PEDIDO */
+/* ========================= */
+
+#formulario{
+
+    width:100%;
+    max-width:650px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+#formulario label{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+#formulario input,
+#formulario select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#formulario input:focus,
+#formulario select:focus{
+
+    border-color:#d62828;
+
+    box-shadow:0 0 8px rgba(214,40,40,.3);
+
+}
+
+#formulario button{
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#formulario button:hover{
+
+    background:#9d0208;
+
+    transform:translateY(-2px);
+
+}
+
+/* ========================= */
+/* RESUMO DO PEDIDO */
+/* ========================= */
+
+#resumo-pedido{
+
+    width:100%;
+    max-width:650px;
+
+    margin-bottom:30px;
+
+}
+
+.card-resumo{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.card-resumo img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+.card-resumo h2{
+
+    font-size:30px;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+}
+
+.card-resumo p{
+
+    font-size:18px;
+
+    margin:8px 0;
+
+    color:#555;
+
+}
+
+.card-resumo h3{
+
+    margin-top:20px;
+
+    color:#d62828;
+
+    font-size:30px;
+
+}
+
+/* ========================= */
+/* LISTA DE PEDIDOS */
+/* ========================= */
+
+#lista-pedidos{
+
+    width:100%;
+    max-width:900px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ========================= */
+/* CARD PEDIDO */
+/* ========================= */
+
+.card-pedido{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.card-pedido h2{
+
+    color:#d62828;
+
+    margin-bottom:15px;
+
+}
+
+.card-pedido p{
+
+    margin:8px 0;
+
+    font-size:18px;
+
+}
