@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h1>Cadastre-se</h1>
+            <form id="formulario">
+                <div class="campos">
+                    <label for="nome">Nome</label>
+                    <input placeholder="Digite seu nome" type="text" id="nome">
+
+                    <label for="email">Email</label>
+                    <input placeholder="nome@exemplo.com" type="email" id="email" name="user-email" >
+
+                    <label for="senha">Senha</label>
+                    <input placeholder="Mínimo 8 caracteres, 1 maiúscula" type="password" name="senha" id="senha" minlength="8">
+
+                    <label for="c_senha">Confirmar senha</label>
+                    <input type="password" name="c_senha" id="c_senha" minlength="8">
+
+                    <button type="submit">Cadastrar</button>
+
+                </div>
+        </div>
+
+        </form>
+
+    </main>
+
+
+</body>
+
+</html>

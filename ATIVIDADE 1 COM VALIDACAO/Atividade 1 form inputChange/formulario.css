@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif
+}
+
+.container {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduzido de 15px para aproximar os elementos internos */
+    margin-bottom: 15px; /* Substitui o espacamento anterior por uma margem inferior por campo */
+}
+
+.campos input {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: -2px; /* Puxa o texto levemente para perto do input */
+}
+
+.botao-style {
+   display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(22, 75, 37);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(72, 221, 97);
+    color: rgb(22, 75, 37);
+}
+
+button:disabled {
+    background-color: #cccccc; /* Cor cinza */
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.7;
+    
+}
