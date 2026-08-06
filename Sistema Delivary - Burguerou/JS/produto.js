@@ -14,34 +14,22 @@ botaoVoltar.addEventListener("click", () => {
 const card = document.createElement("div");
 card.className = "card-detalhes";
 
-// Imagem
 const imagem = document.createElement("img");
 imagem.src = produto.imagem;
 imagem.alt = produto.nome;
 
-// Título
 const titulo = document.createElement("h1");
 titulo.textContent = produto.nome;
 
-// Preço
 const preco = document.createElement("h2");
 preco.textContent = `R$ ${produto.preco.toFixed(2)}`;
 preco.className = "preco-produto";
 
-// Descrição
 const itens = document.createElement("p");
 itens.textContent = produto.itens;
 
-// Detalhes
 const lista = document.createElement("ul");
 lista.setAttribute("id", "detalhes")
-
-
-
-
-// =====================
-// Quantidade
-// =====================
 
 let quantidadeAtual = 1;
 
@@ -61,13 +49,9 @@ quantidade.textContent = quantidadeAtual;
 const aumentar = document.createElement("button");
 aumentar.textContent = "+";
 
-// Atualiza o preço
-
 function atualizarPreco() {
   preco.textContent = `R$ ${(produto.preco * quantidadeAtual).toFixed(2)}`;
 }
-
-// Botão +
 
 aumentar.addEventListener("click", () => {
   quantidadeAtual++;
@@ -76,8 +60,6 @@ aumentar.addEventListener("click", () => {
 
   atualizarPreco();
 });
-
-// Botão -
 
 diminuir.addEventListener("click", () => {
   if (quantidadeAtual > 1) {
@@ -89,8 +71,6 @@ diminuir.addEventListener("click", () => {
   }
 });
 
-// Botão Fazer Pedido
-
 const botao = document.createElement("button");
 botao.textContent = "Fazer Pedido";
 botao.className = "botao-pedido";
@@ -101,10 +81,6 @@ botao.addEventListener("click", () => {
     `pedido.html?id=${produto.id}&quantidade=${quantidadeAtual}`;
 
 });
-
-// =====================
-// Adicionando ao card
-// =====================
 
 card.appendChild(imagem);
 card.appendChild(titulo);
