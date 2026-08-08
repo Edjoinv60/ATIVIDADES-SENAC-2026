@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,58 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container-library">
         <h1>Biblioteca</h1>
 
-        <form id="formulary">
 
+        <form id="formularyLibrary">
             <div class="fields">
                 <label for="name">Nome do Livro:</label>
-                <input placeholder="Digite o nome do livro." type="text" name="user-nome" id="name" >
+                <input placeholder="Digite o nome do livro." type="text" name="user-nome" id="name" required>
             </div>
 
             <div class="fields">
                 <label for="author">Autor:</label>
-                <input placeholder="Digite o nome do autor." type="text" name="user-autor" id="author">
+                <input placeholder="Digite o nome do autor." type="text" name="user-autor" id="author" required>
             </div>
 
             <div class="fields">
-                <label for="gender">Genero:</label>
-                <input placeholder="Digite o genero do livro." type="text" name="genero" id="gender">
+                <label for="gender">Gênero:</label>
+                <input placeholder="Digite o gênero do livro." type="text" name="genero" id="gender" required>
             </div>
 
             <div class="fields">
                 <label for="quantity">Quantidade de Exemplares:</label>
-                <input placeholder="Digite a quantidade de exemplares." type="text" name="quantidade de exemplares" id="quantity">
+                <input placeholder="Digite a quantidade de exemplares." type="number" min="1" name="quantidade"
+                    id="quantity" required>
             </div>
-            
+
             <div class="botao-style">
-            <button id="botao" disabled>Cadastrar Livro</button>
+                <button type="submit" id="buttonLibrary">Cadastrar Livro</button>
             </div>
         </form>
-    
+
+
+        <div class="table-library hidden">
+            <table id="tableLibrary">
+                <thead>
+                    <tr>
+                        <th>Nome do Livro</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th class="text-center">Quantidade</th>
+                        <th class="text-center">Total do Acervo</th>
+                        <th class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBodyLibrary">
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

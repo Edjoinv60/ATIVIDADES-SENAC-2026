@@ -1,67 +1,182 @@
+/* RESET E ESTILOS GERAIS */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: #F8F9FA;
+    background-color: #0F172A;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: sans-serif;
-    color: white;
-  
+    padding: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #F8FAFC;
 }
 
-.container {
+/* CONTAINER PRINCIPAL */
+.container-library {
     background-color: #1E293B;
-    width: 350px;
+    width: 100%;
+    max-width: 1200px;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 12px #1E293B;
-}
-
-.container:hover {
-    width: 360px;
-    padding: 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #F8FAFC;
 }
 
+/* LAYOUT FLEX (LADO A LADO NO DESKTOP) */
+@media (min-width: 768px) {
+    .container-library {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .container-library h1 {
+        width: 100%;
+    }
+
+    #formularyLibrary {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .table-library {
+        flex: 1.6;
+        min-width: 360px;
+    }
+}
+
+/* CONTAINER DA TABELA (COM ROLAGEM) */
+.table-library {
+    max-height: 380px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+/* FORMULÁRIO */
 .fields {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Reduzido de 15px para aproximar os elementos internos */
-    margin-bottom: 25px; /* Substitui o espacamento anterior por uma margem inferior por campo */
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.fields label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #CBD5E1;
 }
 
 .fields input {
-    padding: 10px 10px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 1px solid #334155;
+    background-color: #0F172A;
+    color: #F8FAFC;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.fields input:focus {
+    border-color: #D97706;
+}
+
+.fields input::placeholder {
+    color: #64748B;
 }
 
 .botao-style {
-   display: flex;
-    justify-content: center;
+    display: flex;
+    margin-top: 25px;
 }
 
-button {
+/* BOTÃO DO FORMULÁRIO */
+#formularyLibrary button {
+    width: 100%;
     background-color: #D97706;
     color: white;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 22px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #ffb254;
-    color: #1E293B;
-    transition: color 0.3s
-   
+#formularyLibrary button:hover {
+    background-color: #F59E0B;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0F172A;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #334155;
+    color: #F8FAFC;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Fixa o cabeçalho ao rolar a lista */
+}
+
+td {
+    border-bottom: 1px solid #1E293B;
+    color: #CBD5E1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ALINHAMENTO CENTRAL DAS COLUNAS NUMÉRICAS E DE AÇÃO */
+th:nth-child(4), td:nth-child(4),
+th:nth-child(5), td:nth-child(5),
+th:nth-child(6), td:nth-child(6) {
+    text-align: center;
+}
+
+/* BOTÃO DE EXCLUIR NA TABELA */
+.btn-delete, .delete-button {
+    background-color: #EF4444;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    width: auto;
+}
+
+.btn-delete:hover, .delete-button:hover {
+    background-color: #DC2626;
+}
+/* Classe utilitária para ocultar elementos */
+.hidden {
+    display: none !important;
 }
